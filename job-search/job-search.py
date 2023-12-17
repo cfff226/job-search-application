@@ -22,11 +22,19 @@ while not form_complete:
     else:
         continue
 
+while True:
     # Request input for users age
     try:
-        age = int(input("Please input your age"))
+        age = int(input("Please input your age: "))
+        if age < 16:
+            raise Exception("The minimum age requirement is 16")
+            break
+        elif 16 <= age < 100:
+            print(f"Your age is {age}")
+            break
     except ValueError:
         print("Your input isn't valid")
+        continue
 
     # Request input for users current location
 
@@ -37,4 +45,3 @@ while not form_complete:
     # Request input for users skills
 
     # Request input for users preferred job type
-
