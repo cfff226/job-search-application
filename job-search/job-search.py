@@ -26,10 +26,10 @@ while True:
     # Request input for users age
     try:
         age = int(input("Please input your age: "))
-        if age < 16:
+        if age < 18:
             raise Exception("The minimum age requirement is 16")
             break
-        elif 16 <= age < 100:
+        elif 18 <= age < 160:
             print(f"Your age is {age}")
             break
     except ValueError:
@@ -38,7 +38,18 @@ while True:
 
     # Request input for users current location
 
+while True:
+    location = input("Please input your location: ")
+    if not location.isalpha():
+        print("Your input isn't valid")
+        continue
+    else:
+        print(f"You have chosen {location} as your location")
+
+
     # Request input for users email address
+
+    # Extend email input to check if email already exists
 
     # Request input for users contact number
 
