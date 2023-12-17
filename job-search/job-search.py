@@ -13,6 +13,12 @@ form_complete = False
 
 # while loop to show the form until the form has been completed
 
+while not form_complete:
+    try:
+    # Request input for users name
+        name = str(input("Please input your name: "))
+    except ValueError:
+        print("Your input isn't valid")
     
     # Request input for users age
 
