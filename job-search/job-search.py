@@ -40,7 +40,8 @@ while True:
 
 while True:
     location = input("Please input your location: ")
-    if not location.isalpha():
+    new_location = location.replace(" ", "")
+    if not new_location.isalpha():
         print("Your input isn't valid")
         continue
     else:
