@@ -15,7 +15,8 @@ form_complete = False
 
 while not form_complete:
     name = input("Please input your name: ")
-    if name.isalpha():
+    new_name = name.replace(" ", "")
+    if new_name.isalpha():
         print(f"Your name is {name}")
         break
     else:
