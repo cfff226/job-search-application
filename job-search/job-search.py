@@ -66,7 +66,15 @@ while True:
 
     # Extend email input to check if email already exists
 
+while True:
     # Request input for users contact number
+    user_phone_number = str(input("Please input your contact number: +"))
+    new_user_phone_number = user_phone_number.replace(" ", "")
+    if new_user_phone_number.isdigit():
+        print("This number contacts only digits")
+        if len(new_user_phone_number) < 13:
+            print("This number is valid")
+            break
 
     # Request input for users skills
 
