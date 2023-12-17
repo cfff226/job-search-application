@@ -54,14 +54,15 @@ while True:
     if "@" and "." in user_email:
         print(f"Your email address is {user_email}")
         break
-    else:
+
+while True:
+    # Request input for confirmation of users email address
+    user_email_confirmation = input("Please confirm your email address: ")
+    if user_email != user_email_confirmation:
+        print("The email address's that you have entered do not match")
         continue
-
-
-    
-
-
-
+    else:
+        break
 
     # Extend email input to check if email already exists
 
