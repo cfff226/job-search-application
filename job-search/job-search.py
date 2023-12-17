@@ -47,7 +47,6 @@ while True:
     else:
         print(f"You have chosen {location} as your location")
 
-
     # Request input for users email address
 
     # Extend email input to check if email already exists
