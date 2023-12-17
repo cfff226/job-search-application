@@ -46,9 +46,22 @@ while True:
         continue
     else:
         print(f"You have chosen {location} as your location")
+        break
 
-
+while True:
     # Request input for users email address
+    user_email = input("Please input your email address: ")
+    if "@" and "." in user_email:
+        print(f"Your email address is {user_email}")
+        break
+    else:
+        continue
+
+
+    
+
+
+
 
     # Extend email input to check if email already exists
 
