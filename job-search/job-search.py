@@ -128,7 +128,9 @@ while skills_listed is False:
         # Request input for users skills
         try:
             input_skills = int(
-                input("Please type in the number of each of your skills or type '0' to add additional skills: ")
+                input(
+                    "Please type in the number of each of your skills or type '0' to add additional skills: "
+                )
             )
             if input_skills == 0:
                 break
@@ -143,12 +145,14 @@ while skills_listed is False:
 
             if result not in users_skills_list:
                 users_skills_list.append(result)
-                print(users_skills_list)
+                string_of_users_skills = ", ".join(users_skills_list)
+                print(f"Your chosen list of skills are: {string_of_users_skills}")
                 continue
-                
-        
-    additional_skills = input("Please list any relevant skills that aren't already listed: ")
+
+    additional_skills = input(
+        "Please list any relevant skills that aren't already listed: "
+    )
     if additional_skills not in users_skills_list:
         users_skills_list.append(additional_skills)
-        print(users_skills_list)
-                
+        string_of_users_skills = ", ".join(users_skills_list)
+        print(f"Your chosen list of skills are: {string_of_users_skills}")
