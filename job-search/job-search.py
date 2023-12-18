@@ -122,10 +122,16 @@ while skills_listed is False:
         idx = tech_skills.index(tech_skills[i])
         skills_listed = True
 
-    # Request input for users skills
-    input_skills = int(input("Please type in the number of each of your skills: "))
-    input_skills2 = input_skills - 1
-    length = len(tech_skills) + 1
-    if input_skills2 in range(1, length):
-        result = tech_skills[input_skills2]
-        print(result)
+    while True:
+        # Request input for users skills
+        input_skills = int(input("Please type in the number of each of your skills: "))
+        input_skills2 = input_skills - 1
+        length = len(tech_skills) + 1
+
+        if input_skills2 in range(1, length):
+            result = tech_skills[input_skills2]
+            
+            if result not in users_skills_list:
+                users_skills_list.append(result)
+                print(users_skills_list)
+                continue
