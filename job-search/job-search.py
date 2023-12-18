@@ -41,6 +41,8 @@ tech_skills = [
     "Gitpod",
 ]
 
+users_skills_list = []
+
 form_complete = False
 
 # while loop to show the form until the form has been completed
@@ -79,8 +81,8 @@ while True:
     else:
         print(f"You have chosen {location} as your location")
         break
-       
-      
+
+
 while True:
     # Request input for users email address
     user_email = input("Please input your email address: ")
@@ -117,6 +119,13 @@ while skills_listed is False:
 
     for i in range(len(tech_skills)):
         print(str(i + 1) + ". " + tech_skills[i])
+        idx = tech_skills.index(tech_skills[i])
         skills_listed = True
 
     # Request input for users skills
+    input_skills = int(input("Please type in the number of each of your skills: "))
+    input_skills2 = input_skills - 1
+    length = len(tech_skills) + 1
+    if input_skills2 in range(1, length):
+        result = tech_skills[input_skills2]
+        print(result)
