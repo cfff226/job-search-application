@@ -9,6 +9,38 @@
 # Skills
 # Preferred Job Type
 
+
+tech_skills = [
+    "Python",
+    "HTML",
+    "CSS",
+    "Javascript",
+    "React",
+    "Angular",
+    "Vue.js",
+    "Node.js",
+    "Ruby",
+    "Lavarel",
+    "Django",
+    "Springboot" "SQL (Structured Query Language",
+    "MySQL",
+    "MongoDB",
+    "Version Control",
+    "Microsoft Azure",
+    "Cloud Computing" "Server Management",
+    "Docker",
+    "Kubernetes",
+    "Flask",
+    "GraphQL",
+    "Jest",
+    "Mocha",
+    "Jasmine",
+    "pytest",
+    "OAuth" "JSON",
+    "Github",
+    "Gitpod",
+]
+
 form_complete = False
 
 # while loop to show the form until the form has been completed
@@ -46,13 +78,44 @@ while True:
         continue
     else:
         print(f"You have chosen {location} as your location")
-
+        break
+       
+      
+while True:
     # Request input for users email address
+    user_email = input("Please input your email address: ")
+    if "@" and "." in user_email:
+        print(f"Your email address is {user_email}")
+        break
+
+while True:
+    # Request input for confirmation of users email address
+    user_email_confirmation = input("Please confirm your email address: ")
+    if user_email != user_email_confirmation:
+        print("The email address's that you have entered do not match")
+        continue
+    else:
+        break
 
     # Extend email input to check if email already exists
 
+while True:
     # Request input for users contact number
+    user_phone_number = str(input("Please input your contact number: +"))
+    new_user_phone_number = user_phone_number.replace(" ", "")
+    if new_user_phone_number.isdigit():
+        print("This number contacts only digits")
+        if len(new_user_phone_number) < 13:
+            print("This number is valid")
+            break
+
+skills_listed = False
+
+while skills_listed is False:
+    # Output a menu of list of skills to choose from and the user can add these to a list
+
+    for i in range(len(tech_skills)):
+        print(str(i + 1) + ". " + tech_skills[i])
+        skills_listed = True
 
     # Request input for users skills
-
-    # Request input for users preferred job type
