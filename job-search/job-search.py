@@ -86,9 +86,11 @@ while True:
 while True:
     # Request input for users email address
     user_email = input("Please input your email address: ")
-    if "@" and "." in user_email:
+    if "@" in user_email and "." in user_email:
         print(f"Your email address is {user_email}")
         break
+    else:
+        continue
 
 while True:
     # Request input for confirmation of users email address
@@ -130,7 +132,7 @@ while skills_listed is False:
 
         if input_skills2 in range(1, length):
             result = tech_skills[input_skills2]
-            
+
             if result not in users_skills_list:
                 users_skills_list.append(result)
                 print(users_skills_list)
