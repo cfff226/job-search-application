@@ -127,18 +127,28 @@ while skills_listed is False:
     while True:
         # Request input for users skills
         try:
-            input_skills = int(input("Please type in the number of each of your skills: "))
+            input_skills = int(
+                input("Please type in the number of each of your skills or type '0' to add additional skills: ")
+            )
+            if input_skills == 0:
+                break
         except ValueError:
             print("You have entered an incorrect value")
             continue
         input_skills2 = input_skills - 1
         length = len(tech_skills) + 1
 
-        if input_skills2 in range(1, length):
+        if input_skills2 in range(0, length):
             result = tech_skills[input_skills2]
 
             if result not in users_skills_list:
                 users_skills_list.append(result)
                 print(users_skills_list)
                 continue
-
+                
+        
+    additional_skills = input("Please list any relevant skills that aren't already listed: ")
+    if additional_skills not in users_skills_list:
+        users_skills_list.append(additional_skills)
+        print(users_skills_list)
+                
