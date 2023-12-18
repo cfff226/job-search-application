@@ -126,7 +126,11 @@ while skills_listed is False:
 
     while True:
         # Request input for users skills
-        input_skills = int(input("Please type in the number of each of your skills: "))
+        try:
+            input_skills = int(input("Please type in the number of each of your skills: "))
+        except ValueError:
+            print("You have entered an incorrect value")
+            continue
         input_skills2 = input_skills - 1
         length = len(tech_skills) + 1
 
@@ -137,3 +141,4 @@ while skills_listed is False:
                 users_skills_list.append(result)
                 print(users_skills_list)
                 continue
+
