@@ -79,7 +79,8 @@ while True:
     else:
         print(f"You have chosen {location} as your location")
         break
-
+       
+      
 while True:
     # Request input for users email address
     user_email = input("Please input your email address: ")
